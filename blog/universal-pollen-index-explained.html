@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>What Is the Universal Pollen Index (UPI)? The 0–5 Pollen Scale Explained</title>
+<meta name="description" content="The Universal Pollen Index runs 0 to 5: None, Very Low, Low, Moderate, High, Very High. Here is what each level means, how it differs from the 0–12 scale, and why the two are not interchangeable.">
+<link rel="canonical" href="https://pollenary.dancykier.com/blog/universal-pollen-index-explained.html">
+<link rel="icon" type="image/png" href="/assets/icon.png?v=1">
+<meta property="og:type" content="article">
+<meta property="og:title" content="What Is the Universal Pollen Index (UPI)? The 0–5 Pollen Scale Explained">
+<meta property="og:description" content="The Universal Pollen Index runs 0 to 5: None, Very Low, Low, Moderate, High, Very High. Here is what each level means, how it differs from the 0–12 scale, and why the two are not interchangeable.">
+<meta property="og:url" content="https://pollenary.dancykier.com/blog/universal-pollen-index-explained.html">
+<meta property="og:image" content="https://pollenary.dancykier.com/assets/01-today.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="/assets/site.css?v=1">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"What Is the Universal Pollen Index (UPI)? The 0\u20135 Pollen Scale Explained",
+"description":"The Universal Pollen Index runs 0 to 5: None, Very Low, Low, Moderate, High, Very High. Here is what each level means, how it differs from the 0\u201312 scale, and why the two are not interchangeable.","datePublished":"2026-08-25","dateModified":"2026-08-25",
+"author":{"@type":"Organization","name":"Pollenary"},
+"publisher":{"@type":"Organization","name":"Pollenary","logo":{"@type":"ImageObject","url":"https://pollenary.dancykier.com/assets/icon.png"}},
+"mainEntityOfPage":{"@type":"WebPage","@id":"https://pollenary.dancykier.com/blog/universal-pollen-index-explained.html"}}
+</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is a normal Universal Pollen Index value?","acceptedAnswer":{"@type":"Answer","text":"Most days in most places fall between 0 and 2. In one 35-city sample, 72% of place-days were Very Low or Low. A 4 or 5 is genuinely unusual and worth acting on."}},{"@type":"Question","name":"Is UPI 3 bad?","acceptedAnswer":{"@type":"Answer","text":"UPI 3 is Moderate \u2014 the level at which most people allergic to that specific pollen will notice symptoms. Whether it is bad for you depends on whether you react to the plant driving it."}},{"@type":"Question","name":"Can I compare UPI to a 0-12 pollen index?","acceptedAnswer":{"@type":"Answer","text":"No. They come from different models and the relationship between them is weak and location-dependent. A measured comparison across 35 US cities found the best possible conversion removed only 14% of the variation."}}]}</script>
+</head><body>
+<header class="site"><div class="wrap">
+  <a href="/" style="display:flex;align-items:center;gap:14px;color:inherit">
+    <img src="/assets/icon.png" alt="Pollenary"><span class="brand">Pollenary</span></a>
+  <nav><a href="/blog/">Guides</a><a href="/support.html">Support</a><a href="https://apps.apple.com/us/app/id6775881137">Download</a></nav>
+</div></header>
+<main class="wrap"><article>
+
+<h1>What is the Universal Pollen Index?</h1>
+<p class="meta">Reference · updated August 2026</p>
+<p class="lede">The <strong>Universal Pollen Index (UPI)</strong> is a 0–5 scale used by Google's Pollen API to describe how much pollen is in the air. It is reported per pollen type — tree, grass, weed — and per individual plant, at roughly 1&nbsp;km resolution.</p>
+
+<h2>The six levels</h2>
+<table>
+  <tr><th>UPI</th><th>Category</th><th>What it means in practice</th></tr>
+  <tr><td>0</td><td>None</td><td>Nothing of that type in the air.</td></tr>
+  <tr><td>1</td><td>Very Low</td><td>Fine for almost everyone.</td></tr>
+  <tr><td>2</td><td>Low</td><td>Only the very sensitive will notice.</td></tr>
+  <tr><td>3</td><td>Moderate</td><td>Most people allergic to that pollen will feel it.</td></tr>
+  <tr><td>4</td><td>High</td><td>A rough day if you react to what is out there.</td></tr>
+  <tr><td>5</td><td>Very High</td><td>Stay in if you can.</td></tr>
+</table>
+
+<h2>How it is built</h2>
+<p>Google describes the UPI as a representation of pollen level that accounts for the concentration per plant model, many different local pollen indices used worldwide, and the <strong>allergenicity</strong> of different pollen types — that is, how strongly a given pollen tends to provoke symptoms. It is a modelled prediction of grains per cubic metre, not a direct count.</p>
+<p>Two consequences follow. First, it is a forecast, so it can be wrong. Second, because allergenicity is folded in, a 3 for ragweed and a 3 for pine are not the same number of grains — they are a similar amount of <em>trouble</em>.</p>
+
+<h2>Why you cannot convert it to the 0–12 scale</h2>
+<p>Several US apps use a different 0–12 index. It is tempting to divide by 2.4 and move on. That does not work: across 175 place-days in 35 US cities, the best possible straight-line conversion removed only 14% of the variation, and barely beat ignoring the other source altogether. <a href="/blog/why-pollen-apps-disagree.html">The full comparison is here.</a></p>
+<p>Practical rule: <strong>never compare a number from one app to a number from another.</strong> Compare an app only against itself, over time.</p>
+
+<h2>Reading a UPI number well</h2>
+<ul>
+  <li><strong>Check the type, not the total.</strong> Grass 4 matters enormously if you react to grass and not at all if you do not.</li>
+  <li><strong>Watch the direction.</strong> A rise from 2 to 4 is more informative than the 4 on its own.</li>
+  <li><strong>Expect rain to knock it down.</strong> Heavy rain washes pollen out of the air, so a wet day usually under-runs its forecast.</li>
+  <li><strong>In season matters.</strong> Google flags whether a plant is in its season; an out-of-season plant showing a 1 is usually background.</li>
+</ul>
+<p><a href="/">Pollenary</a> shows the UPI per plant per day, so you can see a Ragweed 4 sitting next to a Tree 1 instead of one blended score.</p>
+
+<hr style="border:0;border-top:1px solid var(--line);margin:40px 0">
+<p class="note">Pollen levels are a forecast, not a medical measurement. Pollenary is not a medical device and does not diagnose or treat any condition. Talk to a doctor about your allergies.</p>
+<p><a class="cta" href="https://apps.apple.com/us/app/id6775881137">Get Pollenary — free on the App Store</a></p>
+</article></main>
+<footer class="site"><div class="wrap">
+<a href="/">Home</a> · <a href="/blog/">Guides</a> · <a href="/support.html">Support</a> · <a href="/privacy.html">Privacy</a><br>
+<span style="opacity:.7">© 2026 Summit Electronics LLC</span>
+</div></footer></body></html>

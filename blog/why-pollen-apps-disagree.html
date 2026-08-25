@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Why Do Pollen Apps Disagree? We Compared 175 Place-Days Against Real Pollen Counts</title>
+<meta name="description" content="Two widely used pollen sources agreed on whether a day was bad only about half the time across 35 US cities. Here is the data, and what certified counting stations said.">
+<link rel="canonical" href="https://pollenary.dancykier.com/blog/why-pollen-apps-disagree.html">
+<link rel="icon" type="image/png" href="/assets/icon.png?v=1">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Why Do Pollen Apps Disagree? We Compared 175 Place-Days Against Real Pollen Counts">
+<meta property="og:description" content="Two widely used pollen sources agreed on whether a day was bad only about half the time across 35 US cities. Here is the data, and what certified counting stations said.">
+<meta property="og:url" content="https://pollenary.dancykier.com/blog/why-pollen-apps-disagree.html">
+<meta property="og:image" content="https://pollenary.dancykier.com/assets/01-today.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="/assets/site.css?v=1">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article",
+ "headline":"Why Do Pollen Apps Disagree? We Compared 175 Place-Days Against Real Pollen Counts",
+ "description":"Two widely used pollen sources agreed on whether a day was bad only about half the time across 35 US cities. Here is the data, and what certified counting stations said.",
+ "datePublished":"2026-08-25","dateModified":"2026-08-25",
+ "author":{"@type":"Organization","name":"Pollenary"},
+ "publisher":{"@type":"Organization","name":"Pollenary","logo":{"@type":"ImageObject","url":"https://pollenary.dancykier.com/assets/icon.png"}},
+ "mainEntityOfPage":{"@type":"WebPage","@id":"https://pollenary.dancykier.com/blog/why-pollen-apps-disagree.html"}}
+</script>
+</head><body>
+<header class="site"><div class="wrap">
+  <a href="/" style="display:flex;align-items:center;gap:14px;color:inherit">
+    <img src="/assets/icon.png" alt="Pollenary"><span class="brand">Pollenary</span></a>
+  <nav><a href="/blog/">Guides</a><a href="/support.html">Support</a>
+       <a href="https://apps.apple.com/us/app/id6775881137">Download</a></nav>
+</div></header>
+<main class="wrap"><article>
+<h1>Why do pollen apps disagree?</h1>
+<p class="meta">Original measurement · 175 place-days across 35 US cities · August 2026</p>
+
+<p class="lede">Open two pollen apps on the same morning, in the same town, and you can be told "Very High" by one and "Low" by the other. That is not a bug in either app. It is what happens when almost every pollen number you see is a <strong>model forecast rather than a measurement</strong> — and different models disagree.</p>
+
+<p>We ran into this while building <a href="/">Pollenary</a> and had to pick a source. Rather than guess, we measured. This page is what we found.</p>
+
+<h2>The short answer</h2>
+<blockquote>Most published pollen numbers are forecasts produced by models, not counts of actual grains in the air. Different providers use different models, different scales, and different definitions of "high" — so they routinely disagree, and the disagreement is not a constant offset you can correct for.</blockquote>
+
+<h2>What we compared</h2>
+<p>We collected paired daily readings for the same locations and dates from two widely used sources: a long-standing US pollen index reported on a 0–12 scale, and Google's Pollen API, which reports a 0–5 Universal Pollen Index per pollen type and per plant.</p>
+<ul>
+  <li><strong>175 place-days</strong> — 35 US cities × 5 forecast days</li>
+  <li>Cities spread across every region: Northeast, Southeast, Midwest, Mountain, Southwest, Pacific Northwest and California</li>
+  <li>Collected the same day, for the same coordinates</li>
+</ul>
+
+<h2>They disagree, badly</h2>
+<table>
+  <tr><th>Measure</th><th>Result</th></tr>
+  <tr><td>Agreement on "is today bad?" (moderate or worse)</td><td><strong>51%</strong> — a coin flip</td></tr>
+  <tr><td>Correlation between the two, city level</td><td>r = 0.51 (R² = 0.26)</td></tr>
+  <tr><td>Rank-order agreement between cities</td><td>Spearman 0.54</td></tr>
+</table>
+
+<p>The distributions are pulled apart too. Of the same 175 place-days, the 0–12 source rated <strong>61% as High or Very High</strong>. The 0–5 source rated <strong>72% as Low or Very Low</strong>.</p>
+
+<h2>You cannot simply rescale one to the other</h2>
+<p>The obvious fix is to convert between the two scales. We tested that directly and it does not work.</p>
+<ul>
+  <li>The best possible straight-line fit removed only <strong>14%</strong> of the variation.</li>
+  <li>Leave-one-out prediction error was <strong>0.64</strong> on a 0–5 scale. Ignoring the other source entirely and always printing the national average scored <strong>0.67</strong>. The conversion beats guessing by about 4%.</li>
+</ul>
+<p>The clearest way to see why: two cities that score almost identically on one scale sit at opposite ends of the other.</p>
+<table>
+  <tr><th>City</th><th>0–12 source</th><th>0–5 source</th></tr>
+  <tr><td>Denver, CO</td><td>10.9</td><td><strong>5.0</strong></td></tr>
+  <tr><td>Columbus, OH</td><td>9.8</td><td><strong>2.2</strong></td></tr>
+  <tr><td>New York, NY</td><td>8.8</td><td><strong>1.4</strong></td></tr>
+</table>
+<p>No function of a single input can map 10.9 and 9.8 onto 5.0 and 2.2 while also sending 8.8 to 1.4. The error is not a bias. It is noise that changes with location.</p>
+
+<h2>So who was right? We asked the people with microscopes</h2>
+<p>Model against model settles nothing. The tiebreaker is <strong>measured counts</strong> — actual pollen grains captured on a slide and counted under a microscope, reported in grains per cubic metre. In the United States these come from certified counting stations, including those reporting to the National Allergy Bureau.</p>
+<p>For the New York metro area we used the counts published by <strong>Fordham University's stations</strong> in Manhattan and Armonk, NY.</p>
+<table>
+  <tr><th>Date (2026)</th><th>Manhattan, measured</th><th>Predominant pollen</th></tr>
+  <tr><td>Aug 17</td><td><strong>0</strong> grains/m³</td><td>none detected</td></tr>
+  <tr><td>Aug 15</td><td>7</td><td>ragweed, lambs quarters, oak</td></tr>
+  <tr><td>Aug 12</td><td>22</td><td>nettle, ragweed</td></tr>
+  <tr><td>Aug 9</td><td>18</td><td>nettle, asters</td></tr>
+</table>
+<p>On the National Allergy Bureau's weed scale, <strong>1–9 grains/m³ is Low and 10–49 is Moderate</strong>. The NYC area sat between 0 and 22 all month — Low to low-Moderate, and almost entirely weed pollen. Tree pollen appeared only as isolated single grains, which is background, not a season.</p>
+<p>Over the same period the 0–12 source was publishing readings of <strong>7.6 to 9.8</strong> for that area. Two independent forecasters agreed with the stations rather than with it: The Weather Channel reported tree "None" and ragweed "None", and Ambee reported tree, grass and weed all "Low".</p>
+
+<h3>One source that looked independent was not</h3>
+<p>WeatherBug appeared to be a third opinion, but it publishes the identical 0–12 scale, the identical band labels and the identical allergen list — it resells the same feed. Watch for that when you are comparing apps: several consumer apps are the same underlying data with different paint.</p>
+
+<h2>What each source is actually good at</h2>
+<p>This is not a story about one provider being useless. The 0–12 source got two things right that mattered:</p>
+<ul>
+  <li><strong>The plant names.</strong> It listed ragweed, nettle and grasses — matching the Fordham slides almost exactly.</li>
+  <li><strong>The seasonal shape.</strong> Its own 30-day history climbed from about 5.0 in late July to 8–9 by mid-August, which is precisely when ragweed season begins in the Northeast.</li>
+</ul>
+<p>It knows <em>what</em> and <em>when</em>. What it did not get right, on the days we could check against a microscope, was <em>how much</em>.</p>
+
+<h2>What this means if you have allergies</h2>
+<ol>
+  <li><strong>Do not compare numbers across apps.</strong> A 7 on one scale is not a 7 on another. Compare an app only against itself, over time.</li>
+  <li><strong>Trends beat absolute values.</strong> "Worse than yesterday" is far more reliable than "exactly 8.3".</li>
+  <li><strong>Which plant matters more than the number.</strong> If you react to ragweed and not to grass, a combined score tells you almost nothing.</li>
+  <li><strong>Look for measured counts near you</strong> when you want ground truth. A certified counting station is the only thing here that is a measurement.</li>
+  <li><strong>Rain suppresses counts.</strong> Heavy rain scavenges pollen out of the air, so a forecast made before a wet day often overstates it.</li>
+</ol>
+
+<h2>What Pollenary does with this</h2>
+<p>We use Google's Pollen API for severity, because that is the source that tracked the measured counts. We still use the 0–12 provider — but only for plant <em>names</em>, and only for today, never for a severity number. And we deliberately did not import that provider's historical numbers into our own history, because doing so would fill the chart with a scale we could not verify.</p>
+<p>Pollenary's history therefore starts empty on the day you install it and grows from real observations. That is slower, and it is honest.</p>
+
+<h3>Method and limits</h3>
+<p>175 paired day-observations across 35 cities, collected 20 August 2026. The five forecast days within a city come from one forecast run and are not independent, so city-level statistics (n = 35) are the honest unit and are what we report. Station counts were read from the publishing stations' own daily records. Measured counts were available for the New York metro area only; we do not claim the same verification for other regions.</p>
+<hr style="border:0;border-top:1px solid var(--line);margin:40px 0">
+<p class="note">Pollen levels are a forecast, not a medical measurement. Pollenary is not a medical device and does not diagnose or treat any condition. Talk to a doctor about your allergies.</p>
+<p><a class="cta" href="https://apps.apple.com/us/app/id6775881137">Get Pollenary — free on the App Store</a></p>
+</article></main>
+<footer class="site"><div class="wrap">
+<a href="/">Home</a> · <a href="/blog/">Guides</a> · <a href="/support.html">Support</a> · <a href="/privacy.html">Privacy</a><br>
+<span style="opacity:.7">© 2026 Summit Electronics LLC</span>
+</div></footer></body></html>

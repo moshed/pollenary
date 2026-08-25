@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pollenary — Pollen Forecast &amp; Per-Allergen Alerts for iPhone</title>
+<meta name="description" content="Pollenary shows which plants are actually in the air — ragweed, grass, tree, mold — for every day of a 5-day forecast, and sends one alert per allergen. Free, no account, US ZIP codes. Built on Google's Pollen API and checked against real pollen-counting stations.">
+<meta name="keywords" content="pollen count app, pollen forecast app, allergy forecast, ragweed forecast, allergy alert app, pollen app iphone, tree pollen, grass pollen, mold count, pollen count today, allergy app no account">
+<link rel="canonical" href="https://pollenary.dancykier.com/">
+<link rel="icon" type="image/png" href="assets/icon.png?v=1">
+<link rel="apple-touch-icon" href="apple-touch-icon.png?v=1">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Pollenary — Pollen Forecast &amp; Per-Allergen Alerts">
+<meta property="og:description" content="Most pollen apps show one number. Pollenary shows which plants are behind it, day by day, and warns you before a bad day arrives.">
+<meta property="og:url" content="https://pollenary.dancykier.com/">
+<meta property="og:image" content="https://pollenary.dancykier.com/assets/01-today.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Pollenary — Pollen Forecast &amp; Per-Allergen Alerts">
+<meta name="twitter:description" content="See which plants are actually in the air, day by day. One alert per allergen. No account.">
+<meta name="twitter:image" content="https://pollenary.dancykier.com/assets/01-today.jpg">
+<link rel="stylesheet" href="assets/site.css?v=1">
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"MobileApplication",
+  "name":"Pollenary",
+  "alternateName":"Pollenary — Pollen forecast & alerts",
+  "operatingSystem":"iOS 17.0 or later",
+  "applicationCategory":"HealthApplication",
+  "description":"Pollenary is an iPhone pollen forecast app for US ZIP codes. Instead of a single combined pollen number, it shows which plants are actually in the air — ragweed, grass, tree, mold — for each day of a 5-day forecast, and sends a separate push notification for every allergen you choose. Severity uses Google's Pollen API on the Universal Pollen Index (0–5) at 1 km resolution. There are no accounts, no sign-in and no ads. Today's pollen and a daily alert are free; Pollenary Plus adds the 5-day forecast, the per-day plant breakdown, early alerts and recorded history.",
+  "url":"https://pollenary.dancykier.com/",
+  "downloadUrl":"https://apps.apple.com/us/app/id6775881137",
+  "author":{"@type":"Organization","name":"Summit Electronics LLC"},
+  "offers":[
+    {"@type":"Offer","price":"0","priceCurrency":"USD","description":"Free — today's pollen level, the plants behind it, and a daily alert"},
+    {"@type":"Offer","price":"0.99","priceCurrency":"USD","description":"Pollenary Plus — 5-day forecast, plants per day, early alerts, history"}
+  ],
+  "screenshot":[
+    "https://pollenary.dancykier.com/assets/01-today.jpg",
+    "https://pollenary.dancykier.com/assets/02-alerts.jpg",
+    "https://pollenary.dancykier.com/assets/04-history.jpg"
+  ],
+  "featureList":[
+    "Shows which plants are in the air, not just one combined number",
+    "Per-day plant breakdown across a 5-day forecast",
+    "One push notification per allergen — ragweed never buries grass",
+    "Early warnings repeated each morning as a bad day approaches",
+    "Recorded daily history for your ZIP code",
+    "No account, no sign-in, no ads, no location tracking",
+    "Severity from Google's Pollen API on the Universal Pollen Index (0-5)"
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"FAQPage",
+  "mainEntity":[
+    {"@type":"Question","name":"Which pollen is in the air today?",
+     "acceptedAnswer":{"@type":"Answer","text":"Pollenary names the individual plants behind the day's pollen level — for example ragweed, nettle, grasses, elm — rather than showing one combined score. Each is grouped as Tree, Grass, Ragweed, Weed, Mold or Other, and each carries its own 0–5 severity."}},
+    {"@type":"Question","name":"Why do pollen apps disagree with each other?",
+     "acceptedAnswer":{"@type":"Answer","text":"Because most pollen numbers are model forecasts, not measurements, and different providers use different scales and models. In a comparison of 175 place-days across 35 US cities, two widely used sources agreed on whether a day was bad only about half the time, and the correlation between them was weak. Measured counts from certified counting stations are the tiebreaker."}},
+    {"@type":"Question","name":"Does Pollenary need an account?",
+     "acceptedAnswer":{"@type":"Answer","text":"No. Pollenary has no accounts, no sign-up and no login. It stores a ZIP code, your alert settings and an anonymous notification token. It never asks for location permission."}},
+    {"@type":"Question","name":"What is the Universal Pollen Index?",
+     "acceptedAnswer":{"@type":"Answer","text":"The Universal Pollen Index (UPI) is a 0–5 scale used by Google's Pollen API: 0 None, 1 Very Low, 2 Low, 3 Moderate, 4 High, 5 Very High. It is reported per pollen type and per plant, at roughly 1 km resolution."}},
+    {"@type":"Question","name":"Is Pollenary free?",
+     "acceptedAnswer":{"@type":"Answer","text":"Yes. Today's pollen level, the plants behind it and a daily alert are free forever. Pollenary Plus, $0.99 per month, adds the 5-day forecast, the plants for each day ahead, early alerts and recorded history."}}
+  ]
+}
+</script>
+</head>
+<body>
+<header class="site"><div class="wrap">
+  <img src="assets/icon.png" alt="Pollenary app icon">
+  <span class="brand">Pollenary</span>
+  <nav>
+    <a href="/blog/">Guides</a>
+    <a href="/support.html">Support</a>
+    <a href="/privacy.html">Privacy</a>
+    <a href="https://apps.apple.com/us/app/id6775881137">Download</a>
+  </nav>
+</div></header>
+
+<main class="wrap">
+  <section class="hero">
+    <div>
+      <span class="pill">iPhone · Free · No account</span>
+      <h1>Know what's actually in the air.</h1>
+      <p class="lede">Most pollen apps show you one number. Pollenary shows you <strong>which plants are behind it</strong> — for every day of the forecast — and warns you before a bad day arrives.</p>
+      <a class="cta" href="https://apps.apple.com/us/app/id6775881137">Download on the App Store</a>
+      <p class="note" style="margin-top:14px">US ZIP codes · iOS 17+ · No sign-up, no ads</p>
+    </div>
+    <img class="shot" src="assets/01-today.jpg" alt="Pollenary showing today's pollen level and the plants behind it">
+  </section>
+
+  <div class="grid">
+    <div class="card"><h3>Plant by plant, day by day</h3><p>Ragweed on Saturday. Grass on Sunday. Tree pollen all week. Named per day, not blended into one score.</p></div>
+    <div class="card"><h3>One alert per allergen</h3><p>Pick the ones you react to. Each gets its own notification, so a ragweed warning never buries a grass warning.</p></div>
+    <div class="card"><h3>Warned early</h3><p>Told days ahead, then again each morning as the bad day gets closer — and the wording tracks it.</p></div>
+    <div class="card"><h3>No account. Ever.</h3><p>No sign-up, no email, no password, no location permission. A ZIP code and your settings. That's all we hold.</p></div>
+  </div>
+
+  <h2 id="data">Where the numbers come from</h2>
+  <p>Severity comes from <strong>Google's Pollen API</strong> on the Universal Pollen Index (0–5), at roughly 1&nbsp;km resolution, covering tree, grass and weed pollen plus individual species.</p>
+  <p>We did not take that on trust. Before shipping we compared candidate sources against <strong>measured counts from certified pollen-counting stations</strong>. Google tracked the measured grain counts; a widely used alternative did not, and could not be rescaled to fit. That source is still used in Pollenary for plant <em>names</em>, but never for severity.</p>
+  <p><a href="/blog/why-pollen-apps-disagree.html">Read the full comparison, with the numbers →</a></p>
+
+  <h2>Free vs Plus</h2>
+  <table>
+    <tr><th>&nbsp;</th><th>Free</th><th>Plus — $0.99/mo</th></tr>
+    <tr><td>Today's level and the plants behind it</td><td>Yes</td><td>Yes</td></tr>
+    <tr><td>Daily alert</td><td>Today only</td><td>Up to 5 days ahead</td></tr>
+    <tr><td>5-day forecast</td><td>—</td><td>Yes</td></tr>
+    <tr><td>Plants for each day ahead</td><td>—</td><td>Yes</td></tr>
+    <tr><td>Recorded history</td><td>—</td><td>Yes</td></tr>
+    <tr><td>ZIP codes</td><td>1, change weekly</td><td>10 a day</td></tr>
+  </table>
+
+  <div class="shots">
+    <img src="assets/02-alerts.jpg" alt="Per-allergen notification toggles in Pollenary settings">
+    <img src="assets/03-ahead.jpg" alt="Pollenary five-day forecast strip">
+    <img src="assets/04-history.jpg" alt="Pollenary recorded pollen history chart">
+  </div>
+
+  <h2 id="faq">Common questions</h2>
+  <div class="faq">
+    <details open><summary>Which pollen is in the air today?</summary><p>Pollenary names the individual plants — ragweed, nettle, grasses, elm and so on — grouped as Tree, Grass, Ragweed, Weed, Mold or Other, each with its own 0–5 severity. Most apps collapse all of that into a single number.</p></details>
+    <details><summary>Why do pollen apps disagree?</summary><p>Because most pollen numbers are model forecasts, not measurements. Across 175 place-days in 35 US cities we found two widely used sources agreed on whether a day was "bad" only about half the time. <a href="/blog/why-pollen-apps-disagree.html">The full comparison is here.</a></p></details>
+    <details><summary>Does it need an account?</summary><p>No. No sign-up, no email, no password. Pollenary never asks for location permission — you type a ZIP code.</p></details>
+    <details><summary>What is the Universal Pollen Index?</summary><p>A 0–5 scale: 0 None, 1 Very Low, 2 Low, 3 Moderate, 4 High, 5 Very High. <a href="/blog/universal-pollen-index-explained.html">Explained in full here.</a></p></details>
+    <details><summary>Is it free?</summary><p>Yes. Today's pollen and a daily alert are free forever. Pollenary Plus is $0.99 a month for the 5-day forecast, per-day plants, early alerts and history.</p></details>
+  </div>
+
+  <p class="note" style="margin-top:36px">Pollen levels shown in Pollenary are a forecast, not a medical measurement. Pollenary is not a medical device and does not diagnose or treat any condition. Talk to a doctor about your allergies.</p>
+</main>
+
+<footer class="site"><div class="wrap">
+  <a href="/blog/">Guides</a> · <a href="/support.html">Support</a> · <a href="/privacy.html">Privacy</a> ·
+  <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">Terms of Use</a> ·
+  <a href="mailto:pollenary@dancykier.com">pollenary@dancykier.com</a><br>
+  <span style="opacity:.7">© 2026 Summit Electronics LLC · <a href="https://projects.dancykier.com/">More projects</a></span>
+</div></footer>
+</body>
+</html>
