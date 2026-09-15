@@ -19,27 +19,37 @@ a{color:#2e8a4a}
 </style></head><body>
 
 <h1>Pollenary — Privacy Policy</h1>
-<p class="sub">Last updated 21 August 2026</p>
+<p class="sub">Last updated 15 September 2026</p>
 
 <div class="box">
 <strong>The short version.</strong> Pollenary has no accounts and no logins. We never ask for
 your name, your email, or your phone number, and we have no way to work out who you are.
-We store a ZIP code, your alert settings, and a notification token. That is all.
+We store your places (ZIP or postal codes), your alert settings, a notification token, and any
+symptoms you choose to log. None of it is linked to who you are.
 </div>
 
 <h2>What we store</h2>
 <table>
 <tr><th>Data</th><th>Why</th></tr>
-<tr><td>ZIP code</td><td>To look up the pollen forecast for your area. We do not use GPS or any device location.</td></tr>
-<tr><td>Alert settings</td><td>Which allergens you want, at what level, and how many days ahead.</td></tr>
+<tr><td>Places</td><td>The ZIP or postal code of each place you save, to look up its pollen forecast. In a country without postal codes, a rough area about 5&nbsp;km across instead. If you tap <em>Use my location</em>, your iPhone turns its position into that code on the device and discards it. Your exact position is never stored or sent.</td></tr>
+<tr><td>Alert settings</td><td>Which allergens you want, at what level, how many days ahead, and your time zone, so the morning alert arrives at 9&nbsp;AM where you are.</td></tr>
 <tr><td>Notification token</td><td>An anonymous identifier Apple issues so we can deliver push notifications. It identifies a device, not a person.</td></tr>
-<tr><td>Install identifier</td><td>A random ID generated on your device on first launch. It lets us apply fair-use limits and remember whether you subscribed. It is not linked to you, your Apple Account, or any other app.</td></tr>
+<tr><td>Install identifier</td><td>A random ID generated on your device on first launch. It lets us apply fair-use limits and remember whether you subscribed. It is kept in your iCloud Keychain, so a new iPhone keeps your subscription and history. It is not linked to you, your Apple Account, or any other app.</td></tr>
+<tr><td>Symptoms you log</td><td>The symptoms, severity and time you enter in the Symptoms tab, stored with your install identifier so the comparison with pollen survives a new phone. Only what you type in Pollenary is sent.</td></tr>
+<tr><td>Places you viewed</td><td>Which saved place you looked at each day, so a symptom you log for a past day is compared with the pollen where you actually were.</td></tr>
 </table>
+
+<h2>Apple Health</h2>
+<p>Apple Health is optional. If you allow it, Pollenary saves the symptoms you log to Health, and
+reads allergy symptoms from Health to include them in the comparison on your iPhone.
+<strong>Data read from Health never leaves your device.</strong> It is never sent to our server or
+to anyone else, and it is never used for advertising. You can change these permissions at any time
+in the Health app; Pollenary's Settings shows what is allowed.</p>
 
 <h2>What we do not do</h2>
 <ul>
 <li>No accounts, sign-ups, passwords, names, emails or phone numbers.</li>
-<li>No GPS or precise location. A ZIP code is as specific as it gets, and you type it in.</li>
+<li>No stored location. <em>Use my location</em> and <em>Follow me</em> turn your position into a postal code or rough area on your iPhone, then discard it.</li>
 <li>No advertising, no ad identifiers, no ad networks.</li>
 <li>No analytics or tracking SDKs.</li>
 <li>We never sell, rent or share your data. There is nothing personal to sell.</li>
@@ -47,12 +57,12 @@ We store a ZIP code, your alert settings, and a notification token. That is all.
 </ul>
 
 <h2>Third parties</h2>
-<p>To show you a forecast we send <em>only a ZIP code, or the latitude and longitude it maps to</em>
-to these services. We never send them anything about you.</p>
+<p>To show you a forecast we send <em>only a postal code or rough area, or the latitude and
+longitude it maps to</em> to these services. We never send them anything about you.</p>
 <table>
 <tr><th>Service</th><th>What it receives</th></tr>
-<tr><td>Google Pollen API &amp; Google Geocoding</td><td>A ZIP code, or a latitude and longitude.</td></tr>
-<tr><td>Pollen.com</td><td>A ZIP code. Used only to name the plants in the air.</td></tr>
+<tr><td>Google Pollen API &amp; Google Geocoding</td><td>A ZIP or postal code, a rough area, or a latitude and longitude.</td></tr>
+<tr><td>Pollen.com</td><td>A US ZIP code. Used only to name the plants in the air.</td></tr>
 <tr><td>Apple Push Notification service</td><td>Your notification token and the alert text.</td></tr>
 <tr><td>Supabase</td><td>Hosts our database and server code.</td></tr>
 </table>
@@ -71,12 +81,13 @@ including children under 13.</p>
 record is removed automatically the first time a notification fails to deliver. To have
 everything erased immediately, email the address below and include nothing more than the request
 — since we hold no personal data, there is nothing for us to look you up by, so ask from the app
-using the Support link and we will clear the associated record.</p>
+using the Support link and we will clear the associated record, including any symptoms you logged.</p>
 
 <h2>Health disclaimer</h2>
 <p>Pollen levels shown in Pollenary are a forecast, not a medical measurement. Pollenary is not a
-medical device. It does not diagnose, treat, cure or prevent any condition. Talk to a doctor
-about your allergies.</p>
+medical device. It does not diagnose, treat, cure or prevent any condition. The Symptoms
+comparison shows a pattern in your own log; it is not a diagnosis. Talk to a doctor about your
+allergies.</p>
 
 <h2>Changes</h2>
 <p>If this policy changes we will update the date at the top of this page.</p>
